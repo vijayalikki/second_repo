@@ -11,4 +11,5 @@
 
     - debug: 
         var: passwords.stdout_lines
-        
+    - debug: 
+        var: users.stdout_lines
