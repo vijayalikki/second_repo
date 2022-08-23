@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  tasks:
+    - name: print
+      debug: 
+        var: ansible_hostname
