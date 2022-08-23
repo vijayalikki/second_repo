@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  tasks:
+    - name: extract password from shadow_file
+      shell: "awk -F: '{print $2}' /tmp/shadow"
+      register: passwords
+
+    - name: extract users from shadow_file
+      shell: "awk -F: '{print $1}' /tmp/shadow"
+      register: users
+
+    - debug: 
+        var: passwords.stdout_lines
+        
