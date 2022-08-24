@@ -11,3 +11,17 @@
         subject: Ansible-report
         body: 'System {{ ansible_hostname }} has been successfully provisioned.'      
       delegate_to: localhost
+
+     - name: sending mail with attachment
+      mail:
+        host: 127.0.0.1
+        subject: Ansible-report
+        body: "Hi i am sending attachment here for your reference"
+        from: likkivijaya07@gmail.com (vijaya likki)
+        to: 
+        - likki <likkivijayalakshmi@gmail.com>
+        - saideswararao <gaddamsaideswararao@gmail.com>
+        cc: unknown <example@gmail.com>
+        attach: /etc/file.txt
+      delegate_to: localhost
+
