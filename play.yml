@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  tasks:
+    - name: check the status of server
+      command: systemctl status httpd
+      register: httpd_status
+    
+    - name: if server is power on then you need to power off
+      service: 
+        name: httpd
+		state: stopped
+      when: httpd_status.state is started           
