@@ -22,6 +22,6 @@
         - likki <likkivijayalakshmi@gmail.com>
         - saideswararao <gaddamsaideswararao@gmail.com>
         cc: unknown <example@gmail.com>
-        attach: /etc/file.txt
+        attach: /etc/file1.txt
       delegate_to: localhost
 
