@@ -3,7 +3,7 @@
     community.general.hpilo_info:
       host: "10.16.50.212"
       login: "{{ var_ILO_LOGIN }}"
-      password: "{{ var_Ilo_PASSWORD }}"
+      password: "{{ var_ilo_PASSWORD }}"
       host_power_status: OFF
     when: host_power_status is ON 
 	
